@@ -1,0 +1,15 @@
+dn: uid=maulana,dc=example,dc=org
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+gidNumber: 0
+givenName: maulana
+sn: saputra
+displayName: maulana
+uid: maulana
+homeDirectory: /home/maulana
+gecos: maulana
+loginShell: /bin/bash
+cn: maulana
+uidNumber: 42140
+mail: maulana@example.com
