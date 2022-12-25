@@ -9,5 +9,5 @@ simple test ldap dengan docker container.
 1. `$ docker-compose exec openldap ./data/user.sh create`
 2. `$ docker-compose exec openldap ./data/user.sh list`
 
-### note
-[ldap GUI](https://sourceforge.net/projects/ldapadmin/)
+### referensi
+[ldap GUI](https://www.ldapsoft.com/download.html)

@@ -1,15 +1,59 @@
-dn: uid=maulana,dc=example,dc=org
-objectClass: posixAccount
+# ou=groups,dc=example,dc=org
+dn: ou=groups,dc=example,dc=org
+ou: groups
 objectClass: top
-objectClass: inetOrgPerson
-gidNumber: 0
-givenName: maulana
-sn: saputra
-displayName: maulana
-uid: maulana
-homeDirectory: /home/maulana
-gecos: maulana
-loginShell: /bin/bash
-cn: maulana
-uidNumber: 42140
-mail: maulana@example.com
+objectClass: organizationalUnit
+
+# cn=admin,ou=groups,dc=example,dc=org
+dn: cn=admin,ou=groups,dc=example,dc=org
+cn: admin
+gidnumber: 500
+memberuid: admin
+objectclass: posixGroup
+objectclass: top
+
+# cn=users,ou=groups,dc=example,dc=org
+dn: cn=users,ou=groups,dc=example,dc=org
+cn: users
+gidnumber: 502
+memberuid: admin
+objectclass: posixGroup
+objectclass: top
+
+# cn=writer,ou=groups,dc=example,dc=org
+dn: cn=writer,ou=groups,dc=example,dc=org
+cn: writer
+gidnumber: 501
+memberuid: writer
+objectclass: posixGroup
+objectclass: top
+
+# cn=Admin User,cn=users,ou=groups,dc=example,dc=org
+dn: cn=Admin User,cn=users,ou=groups,dc=example,dc=org
+cn: Admin User
+gidnumber: 500
+givenname: Admin
+homedirectory: /home/users/adminuser
+mail: admin@example.com
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: User
+uid: admin
+uidnumber: 1000
+userpassword: {MD5}ISMvKXpXpadDiUoOSoAfww==
+
+# cn=Writer User,cn=users,ou=groups,dc=example,dc=org
+dn: cn=Writer User,cn=users,ou=groups,dc=example,dc=org
+cn: Writer User
+gidnumber: 501
+givenname: Writer
+homedirectory: /home/users/writer
+mail: writer@example.com
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: User
+uid: writer
+uidnumber: 1001
+userpassword: {MD5}ISMvKXpXpadDiUoOSoAfww==
